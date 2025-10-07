@@ -6,7 +6,7 @@ from rapidfuzz import fuzz
 import tempfile
 
 # === Paramètres Excel ===
-EXCEL_MODELE = r"C:\Users\Mikaël Wolfe\OneDrive\Documents\Code\Projet_MLS\Comparables.xlsx"
+EXCEL_MODELE = "Comparables.xlsx"
 
 st.title("📄 Extraction PDF multi-sections avec comparaison d'adresses, conversion en pi² et numéro MLS")
 
@@ -240,3 +240,4 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
