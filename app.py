@@ -148,9 +148,9 @@ with col1:
 # Colonne droite → Autres PDFs
 # -------------------
 with col2:
-    st.header("📄 Évaluations foncières")
+    st.header("📄 Évaluations Mun.")
     uploaded_pdfs_other = st.file_uploader(
-        "Glissez vos autres fichiers PDF", 
+        "Glissez vos rôles d'évaluation", 
         type=["pdf"], 
         accept_multiple_files=True,
         key="upload_other"
@@ -229,5 +229,6 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
 
 
