@@ -62,7 +62,7 @@ col1, col2 = st.columns(2)
 # Colonne gauche → PDFs MLS
 # -------------------
 with col1:
-    st.header("💰 Fiches MLS")
+    st.header("Fiches MLS")
     uploaded_pdfs_mls = st.file_uploader(
         "Glissez vos fichiers PDF MLS", 
         type=["pdf"], 
@@ -148,7 +148,7 @@ with col1:
 # Colonne droite → Autres PDFs
 # -------------------
 with col2:
-    st.header("📄 Évaluations Mun.")
+    st.header("Évaluations Mun.")
     uploaded_pdfs_other = st.file_uploader(
         "Glissez vos rôles d'évaluation", 
         type=["pdf"], 
@@ -229,6 +229,7 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
 
 
 
