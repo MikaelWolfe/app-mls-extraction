@@ -224,11 +224,12 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
     wb.save(tmp.name)
     tmp.seek(0)
     st.download_button(
-        "⬇️ Télécharger Excel complet (MLS + Autres PDFs)",
+        "⬇️ Télécharger Excel complet",
         data=open(tmp.name, "rb").read(),
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
 
 
 
