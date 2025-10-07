@@ -62,7 +62,7 @@ col1, col2 = st.columns(2)
 # Colonne gauche → PDFs MLS
 # -------------------
 with col1:
-    st.header("💰 PDFs MLS multi-fiches")
+    st.header("💰 Fiches MLS")
     uploaded_pdfs_mls = st.file_uploader(
         "Glissez vos fichiers PDF MLS", 
         type=["pdf"], 
@@ -78,7 +78,7 @@ with col1:
     total_fiches = 0
 
     if uploaded_pdfs_mls:
-        with st.expander("📂 Afficher les détails des fiches MLS"):
+        with st.expander("Afficher plus"):
             for uploaded_pdf in uploaded_pdfs_mls:
                 sections = []
                 section_temp = []
@@ -148,7 +148,7 @@ with col1:
 # Colonne droite → Autres PDFs
 # -------------------
 with col2:
-    st.header("📄 Autres types de PDFs")
+    st.header("📄 Évaluations foncières")
     uploaded_pdfs_other = st.file_uploader(
         "Glissez vos autres fichiers PDF", 
         type=["pdf"], 
@@ -159,7 +159,7 @@ with col2:
     if uploaded_pdfs_other:
         st.write(f"{len(uploaded_pdfs_other)} fichiers téléchargés pour traitement spécial")
 
-        with st.expander("📂 Afficher les détails des rôles d’évaluation"):
+        with st.expander("Afficher plus"):
             for idx, uploaded_pdf in enumerate(uploaded_pdfs_other, start=1):
                 adresse_other = "Non trouvé"
                 superficie = None
@@ -230,3 +230,4 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
