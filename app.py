@@ -157,7 +157,6 @@ with col2:
     )
 
     if uploaded_pdfs_other:
-        st.write(f"{len(uploaded_pdfs_other)} fichiers téléchargés pour traitement spécial")
 
         with st.expander("Afficher plus"):
             for idx, uploaded_pdf in enumerate(uploaded_pdfs_other, start=1):
@@ -230,4 +229,5 @@ with tempfile.NamedTemporaryFile(delete=False, suffix=".xlsm") as tmp:
         file_name="Resultat_Complet_MLS_Autres.xlsm",
         mime="application/vnd.ms-excel.sheet.macroEnabled.12"
     )
+
 
